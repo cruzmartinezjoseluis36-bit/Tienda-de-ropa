@@ -1,0 +1,29 @@
+:root {
+    --male-blue: #85b3f2;
+    --female-pink: #f7b2d1;
+    --dark-purple: #4a1444;
+}
+
+body { font-family: 'Segoe UI', sans-serif; margin: 0; background-color: #fdfdfd; }
+.hidden { display: none; }
+
+/* Navbar */
+.navbar { display: flex; justify-content: space-between; padding: 1rem 5%; background: var(--dark-purple); color: white; }
+.header-male .navbar { background: var(--male-blue); }
+.header-female .navbar { background: var(--female-pink); }
+.nav-links { list-style: none; display: flex; gap: 20px; }
+.nav-links a { color: white; text-decoration: none; font-weight: bold; }
+
+/* Home View */
+.gender-selection { display: flex; justify-content: center; gap: 50px; padding: 50px; }
+.card { text-align: center; cursor: pointer; transition: transform 0.3s; }
+.card:hover { transform: scale(1.05); }
+.card img { border-radius: 15px; width: 250px; }
+
+/* Grid de Productos */
+.category-section { padding: 20px 5%; }
+.products-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+.product-card { border: 2px solid #eee; border-radius: 15px; padding: 15px; text-align: center; }
+.btn-details { border: none; border-radius: 20px; padding: 8px 20px; color: white; cursor: pointer; }
+.male .btn-details, .btn-blue { background-color: var(--male-blue); }
+.female .btn-details, .btn-pink { background-color: var(--female-pink); }
